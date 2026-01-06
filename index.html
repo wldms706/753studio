@@ -70,12 +70,11 @@
 
     <!-- Hero Section -->
     <section id="홈" class="relative h-screen flex items-center justify-center overflow-hidden bg-baegot">
-        <div class="absolute inset-0 z-0 opacity-20">
-            <div class="w-full h-full bg-gray-50 border-2 border-dashed border-gray-200 flex flex-col items-center justify-center">
-                <i class="fas fa-camera text-gray-200 text-5xl mb-4"></i>
-                <span class="text-gray-400 font-bold text-xs text-center px-4">[753스튜디오 매장 분위기]</span>
-            </div>
-        </div>
+        <!-- Background Video -->
+        <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-0 opacity-30">
+            <source src="시술하는모습.MOV" type="video/mp4">
+        </video>
+        <div class="absolute inset-0 bg-baegot/50 z-0"></div>
         <div class="relative z-10 text-center px-6 max-w-5xl mx-auto">
             <div class="inline-flex items-center space-x-2 bg-fresh-yellow text-baegot px-5 py-2 rounded-full mb-10 shadow-2xl animate-bounce">
                 <i class="fas fa-sparkles"></i>
