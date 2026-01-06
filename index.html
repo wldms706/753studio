@@ -152,72 +152,86 @@
 
             <!-- 눈썹 문신 섹션 -->
             <div class="mb-24">
-                <div class="flex items-center mb-10">
-                    <div class="flex-1 h-px bg-gray-200"></div>
-                    <h4 class="text-3xl font-black text-baegot px-8 font-serif">눈썹 문신</h4>
-                    <div class="flex-1 h-px bg-gray-200"></div>
+                <div class="flex items-center justify-between mb-10">
+                    <div class="flex items-center flex-1">
+                        <div class="flex-1 h-px bg-gray-200"></div>
+                        <h4 class="text-3xl font-black text-baegot px-8 font-serif">눈썹 문신</h4>
+                        <div class="flex-1 h-px bg-gray-200"></div>
+                    </div>
+                    <div class="flex gap-3 ml-4">
+                        <button onclick="prevSlide('eyebrow')" class="w-12 h-12 rounded-full bg-baegot text-fresh-yellow flex items-center justify-center hover:bg-fresh-yellow hover:text-baegot transition-all">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button onclick="nextSlide('eyebrow')" class="w-12 h-12 rounded-full bg-baegot text-fresh-yellow flex items-center justify-center hover:bg-fresh-yellow hover:text-baegot transition-all">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                    <div class="group flex flex-col space-y-4">
-                        <div class="w-full h-96 bg-gray-50 border-2 border-dashed border-gray-200 flex flex-col items-center justify-center rounded-[2rem] hover:border-fresh-yellow transition-all">
-                            <i class="fas fa-camera text-gray-200 text-4xl mb-2"></i>
-                            <span class="text-gray-400 font-bold text-xs">자연눈썹 Case 01</span>
+
+                <!-- 슬라이드 컨테이너 -->
+                <div class="relative overflow-hidden rounded-[2rem]">
+                    <div id="eyebrow-slider" class="flex transition-transform duration-500 ease-in-out">
+                        <!-- 여자 눈썹 -->
+                        <div class="min-w-full px-2">
+                            <div class="w-full h-[600px] rounded-[2rem] overflow-hidden shadow-xl">
+                                <img src="여자눈썹/IMG_5913.JPG" alt="여자 자연눈썹" class="w-full h-full object-cover">
+                            </div>
+                            <div class="text-center mt-6">
+                                <span class="text-lg font-black text-baegot">자연눈썹 - 여성</span>
+                            </div>
                         </div>
-                        <div class="flex justify-between items-center px-4">
-                            <span class="text-xs font-black text-baegot/30 tracking-widest uppercase italic">자연눈썹</span>
-                            <span class="text-xs font-bold text-baegot bg-fresh-yellow px-3 py-1 rounded-full">Best</span>
+                        <div class="min-w-full px-2">
+                            <div class="w-full h-[600px] rounded-[2rem] overflow-hidden shadow-xl">
+                                <img src="여자눈썹/IMG_5917.JPG" alt="여자 자연눈썹" class="w-full h-full object-cover">
+                            </div>
+                            <div class="text-center mt-6">
+                                <span class="text-lg font-black text-baegot">자연눈썹 - 여성</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="group flex flex-col space-y-4">
-                        <div class="w-full h-96 bg-gray-50 border-2 border-dashed border-gray-200 flex flex-col items-center justify-center rounded-[2rem] hover:border-fresh-yellow transition-all">
-                            <i class="fas fa-camera text-gray-200 text-4xl mb-2"></i>
-                            <span class="text-gray-400 font-bold text-xs">자연눈썹 Case 02</span>
+                        <div class="min-w-full px-2">
+                            <div class="w-full h-[600px] rounded-[2rem] overflow-hidden shadow-xl">
+                                <img src="여자눈썹/IMG_5923.JPG" alt="여자 자연눈썹" class="w-full h-full object-cover">
+                            </div>
+                            <div class="text-center mt-6">
+                                <span class="text-lg font-black text-baegot">자연눈썹 - 여성</span>
+                            </div>
                         </div>
-                        <div class="flex justify-between items-center px-4">
-                            <span class="text-xs font-black text-baegot/30 tracking-widest uppercase italic">자연눈썹</span>
-                            <span class="text-xs font-bold text-baegot bg-fresh-yellow px-3 py-1 rounded-full">Popular</span>
+                        <!-- 남자 눈썹 -->
+                        <div class="min-w-full px-2">
+                            <div class="w-full h-[600px] rounded-[2rem] overflow-hidden shadow-xl">
+                                <img src="남자눈썹/IMG_5916.JPG" alt="남자 자연눈썹" class="w-full h-full object-cover">
+                            </div>
+                            <div class="text-center mt-6">
+                                <span class="text-lg font-black text-baegot">자연눈썹 - 남성</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="group flex flex-col space-y-4">
-                        <div class="w-full h-96 bg-gray-50 border-2 border-dashed border-gray-200 flex flex-col items-center justify-center rounded-[2rem] hover:border-fresh-yellow transition-all">
-                            <i class="fas fa-camera text-gray-200 text-4xl mb-2"></i>
-                            <span class="text-gray-400 font-bold text-xs">콤보눈썹 Case 01</span>
+                        <div class="min-w-full px-2">
+                            <div class="w-full h-[600px] rounded-[2rem] overflow-hidden shadow-xl">
+                                <img src="남자눈썹/IMG_5921.JPG" alt="남자 자연눈썹" class="w-full h-full object-cover">
+                            </div>
+                            <div class="text-center mt-6">
+                                <span class="text-lg font-black text-baegot">자연눈썹 - 남성</span>
+                            </div>
                         </div>
-                        <div class="flex justify-between items-center px-4">
-                            <span class="text-xs font-black text-baegot/30 tracking-widest uppercase italic">콤보눈썹</span>
-                            <span class="text-xs font-bold text-baegot bg-fresh-yellow px-3 py-1 rounded-full">New</span>
-                        </div>
-                    </div>
-                    <div class="group flex flex-col space-y-4">
-                        <div class="w-full h-96 bg-gray-50 border-2 border-dashed border-gray-200 flex flex-col items-center justify-center rounded-[2rem] hover:border-fresh-yellow transition-all">
-                            <i class="fas fa-camera text-gray-200 text-4xl mb-2"></i>
-                            <span class="text-gray-400 font-bold text-xs">콤보눈썹 Case 02</span>
-                        </div>
-                        <div class="flex justify-between items-center px-4">
-                            <span class="text-xs font-black text-baegot/30 tracking-widest uppercase italic">콤보눈썹</span>
-                            <span class="text-xs font-bold text-baegot bg-fresh-yellow px-3 py-1 rounded-full">Trend</span>
-                        </div>
-                    </div>
-                    <div class="group flex flex-col space-y-4">
-                        <div class="w-full h-96 bg-gray-50 border-2 border-dashed border-gray-200 flex flex-col items-center justify-center rounded-[2rem] hover:border-fresh-yellow transition-all">
-                            <i class="fas fa-camera text-gray-200 text-4xl mb-2"></i>
-                            <span class="text-gray-400 font-bold text-xs">남성눈썹 Case 01</span>
-                        </div>
-                        <div class="flex justify-between items-center px-4">
-                            <span class="text-xs font-black text-baegot/30 tracking-widest uppercase italic">남성전용</span>
-                            <span class="text-xs font-bold text-baegot bg-fresh-yellow px-3 py-1 rounded-full">Special</span>
-                        </div>
-                    </div>
-                    <div class="group flex flex-col space-y-4">
-                        <div class="w-full h-96 bg-gray-50 border-2 border-dashed border-gray-200 flex flex-col items-center justify-center rounded-[2rem] hover:border-fresh-yellow transition-all">
-                            <i class="fas fa-camera text-gray-200 text-4xl mb-2"></i>
-                            <span class="text-gray-400 font-bold text-xs">남성눈썹 Case 02</span>
-                        </div>
-                        <div class="flex justify-between items-center px-4">
-                            <span class="text-xs font-black text-baegot/30 tracking-widest uppercase italic">남성전용</span>
-                            <span class="text-xs font-bold text-baegot bg-fresh-yellow px-3 py-1 rounded-full">Hot</span>
+                        <div class="min-w-full px-2">
+                            <div class="w-full h-[600px] rounded-[2rem] overflow-hidden shadow-xl">
+                                <img src="남자눈썹/IMG_5925.JPG" alt="남자 자연눈썹" class="w-full h-full object-cover">
+                            </div>
+                            <div class="text-center mt-6">
+                                <span class="text-lg font-black text-baegot">자연눈썹 - 남성</span>
+                            </div>
                         </div>
                     </div>
+                </div>
+
+                <!-- 슬라이드 인디케이터 -->
+                <div class="flex justify-center gap-2 mt-8">
+                    <button onclick="goToSlide('eyebrow', 0)" class="eyebrow-indicator w-3 h-3 rounded-full bg-fresh-yellow transition-all"></button>
+                    <button onclick="goToSlide('eyebrow', 1)" class="eyebrow-indicator w-3 h-3 rounded-full bg-gray-300 transition-all"></button>
+                    <button onclick="goToSlide('eyebrow', 2)" class="eyebrow-indicator w-3 h-3 rounded-full bg-gray-300 transition-all"></button>
+                    <button onclick="goToSlide('eyebrow', 3)" class="eyebrow-indicator w-3 h-3 rounded-full bg-gray-300 transition-all"></button>
+                    <button onclick="goToSlide('eyebrow', 4)" class="eyebrow-indicator w-3 h-3 rounded-full bg-gray-300 transition-all"></button>
+                    <button onclick="goToSlide('eyebrow', 5)" class="eyebrow-indicator w-3 h-3 rounded-full bg-gray-300 transition-all"></button>
                 </div>
             </div>
 
@@ -529,6 +543,47 @@
                 mobileMenuIcon.classList.add('fa-bars');
             });
         });
+
+        // Slider functionality
+        let currentSlide = { eyebrow: 0 };
+        const slideCount = { eyebrow: 6 };
+
+        function updateSlider(type) {
+            const slider = document.getElementById(type + '-slider');
+            const indicators = document.querySelectorAll('.' + type + '-indicator');
+
+            slider.style.transform = `translateX(-${currentSlide[type] * 100}%)`;
+
+            indicators.forEach((indicator, index) => {
+                if (index === currentSlide[type]) {
+                    indicator.classList.remove('bg-gray-300');
+                    indicator.classList.add('bg-fresh-yellow');
+                } else {
+                    indicator.classList.remove('bg-fresh-yellow');
+                    indicator.classList.add('bg-gray-300');
+                }
+            });
+        }
+
+        function nextSlide(type) {
+            currentSlide[type] = (currentSlide[type] + 1) % slideCount[type];
+            updateSlider(type);
+        }
+
+        function prevSlide(type) {
+            currentSlide[type] = (currentSlide[type] - 1 + slideCount[type]) % slideCount[type];
+            updateSlider(type);
+        }
+
+        function goToSlide(type, index) {
+            currentSlide[type] = index;
+            updateSlider(type);
+        }
+
+        // Auto slide
+        setInterval(() => {
+            nextSlide('eyebrow');
+        }, 5000);
     </script>
 </body>
 </html>
