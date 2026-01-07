@@ -256,42 +256,91 @@
 
             <!-- SMP 섹션 -->
             <div class="mb-24">
-                <div class="flex items-center mb-10">
-                    <div class="flex-1 h-px bg-gray-200"></div>
-                    <h4 class="text-3xl font-black text-baegot px-8 font-serif">SMP (두피문신)</h4>
-                    <div class="flex-1 h-px bg-gray-200"></div>
+                <div class="flex items-center justify-between mb-10">
+                    <div class="flex items-center flex-1">
+                        <div class="flex-1 h-px bg-gray-200"></div>
+                        <h4 class="text-3xl font-black text-baegot px-8 font-serif">SMP (두피문신)</h4>
+                        <div class="flex-1 h-px bg-gray-200"></div>
+                    </div>
+                    <div class="flex gap-3 ml-4">
+                        <button onclick="prevSlide('smp')" class="w-12 h-12 rounded-full bg-baegot text-fresh-yellow flex items-center justify-center hover:bg-fresh-yellow hover:text-baegot transition-all">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button onclick="nextSlide('smp')" class="w-12 h-12 rounded-full bg-baegot text-fresh-yellow flex items-center justify-center hover:bg-fresh-yellow hover:text-baegot transition-all">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                    <div class="group flex flex-col space-y-4">
-                        <div class="w-full h-96 bg-gray-50 border-2 border-dashed border-gray-200 flex flex-col items-center justify-center rounded-[2rem] hover:border-fresh-yellow transition-all">
-                            <i class="fas fa-camera text-gray-200 text-4xl mb-2"></i>
-                            <span class="text-gray-400 font-bold text-xs">SMP 정수리 밀도 01</span>
+
+                <!-- 문구 추가 -->
+                <div class="mb-10 text-center bg-soft-yellow p-8 rounded-[2rem] border-l-[12px] border-fresh-yellow">
+                    <p class="text-baegot text-2xl md:text-3xl font-black leading-relaxed">
+                        여자 가르마 채우기<br class="md:hidden"/> SMP 전문 시술
+                    </p>
+                </div>
+
+                <!-- 슬라이드 컨테이너 -->
+                <div class="relative overflow-hidden rounded-[2rem]">
+                    <div id="smp-slider" class="flex transition-transform duration-500 ease-in-out">
+                        <div class="min-w-full px-2">
+                            <div class="w-full h-[600px] rounded-[2rem] overflow-hidden shadow-xl bg-gray-50 flex items-center justify-center">
+                                <img src="smp/smp-01.jpeg" alt="여자 가르마 채우기 SMP" class="w-full h-full object-contain">
+                            </div>
+                            <div class="text-center mt-6">
+                                <span class="text-lg font-black text-baegot">여자 가르마 채우기 SMP</span>
+                            </div>
                         </div>
-                        <div class="flex justify-between items-center px-4">
-                            <span class="text-xs font-black text-baegot/30 tracking-widest uppercase italic">정수리 밀도</span>
-                            <span class="text-xs font-bold text-baegot bg-fresh-yellow px-3 py-1 rounded-full">Best</span>
+                        <div class="min-w-full px-2">
+                            <div class="w-full h-[600px] rounded-[2rem] overflow-hidden shadow-xl bg-gray-50 flex items-center justify-center">
+                                <img src="smp/smp-02.jpeg" alt="여자 가르마 채우기 SMP" class="w-full h-full object-contain">
+                            </div>
+                            <div class="text-center mt-6">
+                                <span class="text-lg font-black text-baegot">여자 가르마 채우기 SMP</span>
+                            </div>
+                        </div>
+                        <div class="min-w-full px-2">
+                            <div class="w-full h-[600px] rounded-[2rem] overflow-hidden shadow-xl bg-gray-50 flex items-center justify-center">
+                                <img src="smp/smp-03.jpeg" alt="여자 가르마 채우기 SMP" class="w-full h-full object-contain">
+                            </div>
+                            <div class="text-center mt-6">
+                                <span class="text-lg font-black text-baegot">여자 가르마 채우기 SMP</span>
+                            </div>
+                        </div>
+                        <div class="min-w-full px-2">
+                            <div class="w-full h-[600px] rounded-[2rem] overflow-hidden shadow-xl bg-gray-50 flex items-center justify-center">
+                                <img src="smp/smp-04.jpeg" alt="여자 가르마 채우기 SMP" class="w-full h-full object-contain">
+                            </div>
+                            <div class="text-center mt-6">
+                                <span class="text-lg font-black text-baegot">여자 가르마 채우기 SMP</span>
+                            </div>
+                        </div>
+                        <div class="min-w-full px-2">
+                            <div class="w-full h-[600px] rounded-[2rem] overflow-hidden shadow-xl bg-gray-50 flex items-center justify-center">
+                                <img src="smp/smp-05.jpeg" alt="여자 가르마 채우기 SMP" class="w-full h-full object-contain">
+                            </div>
+                            <div class="text-center mt-6">
+                                <span class="text-lg font-black text-baegot">여자 가르마 채우기 SMP</span>
+                            </div>
+                        </div>
+                        <div class="min-w-full px-2">
+                            <div class="w-full h-[600px] rounded-[2rem] overflow-hidden shadow-xl bg-gray-50 flex items-center justify-center">
+                                <img src="smp/smp-06.jpeg" alt="여자 가르마 채우기 SMP" class="w-full h-full object-contain">
+                            </div>
+                            <div class="text-center mt-6">
+                                <span class="text-lg font-black text-baegot">여자 가르마 채우기 SMP</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="group flex flex-col space-y-4">
-                        <div class="w-full h-96 bg-gray-50 border-2 border-dashed border-gray-200 flex flex-col items-center justify-center rounded-[2rem] hover:border-fresh-yellow transition-all">
-                            <i class="fas fa-camera text-gray-200 text-4xl mb-2"></i>
-                            <span class="text-gray-400 font-bold text-xs">헤어라인 교정 01</span>
-                        </div>
-                        <div class="flex justify-between items-center px-4">
-                            <span class="text-xs font-black text-baegot/30 tracking-widest uppercase italic">헤어라인</span>
-                            <span class="text-xs font-bold text-baegot bg-fresh-yellow px-3 py-1 rounded-full">Popular</span>
-                        </div>
-                    </div>
-                    <div class="group flex flex-col space-y-4">
-                        <div class="w-full h-96 bg-gray-50 border-2 border-dashed border-gray-200 flex flex-col items-center justify-center rounded-[2rem] hover:border-fresh-yellow transition-all">
-                            <i class="fas fa-camera text-gray-200 text-4xl mb-2"></i>
-                            <span class="text-gray-400 font-bold text-xs">헤어라인 교정 02</span>
-                        </div>
-                        <div class="flex justify-between items-center px-4">
-                            <span class="text-xs font-black text-baegot/30 tracking-widest uppercase italic">헤어라인</span>
-                            <span class="text-xs font-bold text-baegot bg-fresh-yellow px-3 py-1 rounded-full">New</span>
-                        </div>
-                    </div>
+                </div>
+
+                <!-- 슬라이드 인디케이터 -->
+                <div class="flex justify-center gap-2 mt-8">
+                    <button onclick="goToSlide('smp', 0)" class="smp-indicator w-3 h-3 rounded-full bg-fresh-yellow transition-all"></button>
+                    <button onclick="goToSlide('smp', 1)" class="smp-indicator w-3 h-3 rounded-full bg-gray-300 transition-all"></button>
+                    <button onclick="goToSlide('smp', 2)" class="smp-indicator w-3 h-3 rounded-full bg-gray-300 transition-all"></button>
+                    <button onclick="goToSlide('smp', 3)" class="smp-indicator w-3 h-3 rounded-full bg-gray-300 transition-all"></button>
+                    <button onclick="goToSlide('smp', 4)" class="smp-indicator w-3 h-3 rounded-full bg-gray-300 transition-all"></button>
+                    <button onclick="goToSlide('smp', 5)" class="smp-indicator w-3 h-3 rounded-full bg-gray-300 transition-all"></button>
                 </div>
             </div>
 
@@ -594,8 +643,8 @@
         });
 
         // Slider functionality
-        let currentSlide = { eyebrow: 0, removal: 0 };
-        const slideCount = { eyebrow: 6, removal: 5 };
+        let currentSlide = { eyebrow: 0, smp: 0, removal: 0 };
+        const slideCount = { eyebrow: 6, smp: 6, removal: 5 };
 
         function updateSlider(type) {
             const slider = document.getElementById(type + '-slider');
