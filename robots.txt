@@ -1,0 +1,21 @@
+# robots.txt for 753 Studio
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /*.json$
+
+# Sitemaps
+Sitemap: https://753studio.com/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
+
+# Specific bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Yeti
+Allow: /
+
+User-agent: Bingbot
+Allow: /
