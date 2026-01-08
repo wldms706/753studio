@@ -3,7 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>753스튜디오 | 배곧 눈썹문신 전문</title>
+    <title>753스튜디오 | 배곧 눈썹문신 전문 | 자연스러운 반영구 눈썹 · SMP · 잔흔제거</title>
+    <meta name="description" content="배곧 프리미엄 반영구 전문 753스튜디오. 서아름 원장의 1:1 맞춤 디자인으로 시간이 지나도 후회 없는 자연스러운 눈썹을 완성합니다. 눈썹문신, SMP, 잔흔제거 전문.">
+    <meta name="keywords" content="배곧 눈썹문신, 시흥 눈썹문신, 753스튜디오, 반영구 눈썹, 자연눈썹, SMP, 두피문신, 잔흔제거, 배곧 반영구, 눈썹 리터치, 서아름 원장">
+    <meta name="author" content="753스튜디오">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://753studio.com/">
+    <meta property="og:title" content="753스튜디오 | 배곧 눈썹문신 전문">
+    <meta property="og:description" content="배곧 프리미엄 반영구 전문 753스튜디오. 서아름 원장의 1:1 맞춤 디자인으로 자연스러운 눈썹을 완성합니다.">
+    <meta property="og:image" content="https://753studio.com/profile/IMG_3132.JPG">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://753studio.com/">
+    <meta property="twitter:title" content="753스튜디오 | 배곧 눈썹문신 전문">
+    <meta property="twitter:description" content="배곧 프리미엄 반영구 전문 753스튜디오. 서아름 원장의 1:1 맞춤 디자인으로 자연스러운 눈썹을 완성합니다.">
+    <meta property="twitter:image" content="https://753studio.com/profile/IMG_3132.JPG">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://753studio.com/">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -187,25 +211,39 @@
 
             <!-- 눈썹 문신 섹션 -->
             <div class="mb-24">
-                <div class="flex items-center justify-between mb-10">
-                    <div class="flex items-center flex-1">
-                        <div class="flex-1 h-px bg-gray-200"></div>
-                        <h4 class="text-3xl font-black text-baegot px-8 font-serif">자연눈썹</h4>
-                        <div class="flex-1 h-px bg-gray-200"></div>
-                    </div>
-                    <div class="flex gap-3 ml-4">
-                        <button onclick="prevSlide('eyebrow')" class="w-12 h-12 rounded-full bg-baegot text-fresh-yellow flex items-center justify-center hover:bg-fresh-yellow hover:text-baegot transition-all">
-                            <i class="fas fa-chevron-left"></i>
-                        </button>
-                        <button onclick="nextSlide('eyebrow')" class="w-12 h-12 rounded-full bg-baegot text-fresh-yellow flex items-center justify-center hover:bg-fresh-yellow hover:text-baegot transition-all">
-                            <i class="fas fa-chevron-right"></i>
-                        </button>
-                    </div>
+                <div class="flex items-center mb-10">
+                    <div class="flex-1 h-px bg-gray-200"></div>
+                    <h4 class="text-3xl font-black text-baegot px-8 font-serif">자연눈썹</h4>
+                    <div class="flex-1 h-px bg-gray-200"></div>
                 </div>
 
-                <!-- 슬라이드 컨테이너 -->
-                <div class="relative overflow-hidden rounded-[2rem]">
-                    <div id="eyebrow-slider" class="flex transition-transform duration-500 ease-in-out">
+                <!-- 문구 및 버튼 -->
+                <div class="mb-10 text-center bg-soft-yellow p-8 rounded-[2rem] border-l-[12px] border-fresh-yellow">
+                    <p class="text-baegot text-2xl md:text-3xl font-black leading-relaxed mb-6">
+                        753 스튜디오의 시그니처 브로우<br class="md:hidden"/> 자연스러운 눈썹 디자인
+                    </p>
+                    <button onclick="toggleEyebrowSlider()" id="eyebrow-toggle-btn" class="inline-flex items-center bg-baegot text-fresh-yellow px-8 py-4 rounded-2xl font-black text-lg shadow-xl hover:bg-fresh-yellow hover:text-baegot transition-all">
+                        <i class="fas fa-images mr-3 text-xl"></i>
+                        <span id="eyebrow-btn-text">사진 더보기</span>
+                        <i id="eyebrow-chevron" class="fas fa-chevron-down ml-3 transition-transform"></i>
+                    </button>
+                </div>
+
+                <!-- 슬라이드 컨테이너 (기본 숨김) -->
+                <div id="eyebrow-slider-container" class="hidden">
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="flex-1"></div>
+                        <div class="flex gap-3">
+                            <button onclick="prevSlide('eyebrow')" class="w-12 h-12 rounded-full bg-baegot text-fresh-yellow flex items-center justify-center hover:bg-fresh-yellow hover:text-baegot transition-all">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button onclick="nextSlide('eyebrow')" class="w-12 h-12 rounded-full bg-baegot text-fresh-yellow flex items-center justify-center hover:bg-fresh-yellow hover:text-baegot transition-all">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="relative overflow-hidden rounded-[2rem]">
+                        <div id="eyebrow-slider" class="flex transition-transform duration-500 ease-in-out">
                         <!-- 여자 눈썹 -->
                         <div class="min-w-full px-2">
                             <div class="w-full h-[600px] rounded-[2rem] overflow-hidden shadow-xl bg-gray-50 flex items-center justify-center">
@@ -259,14 +297,15 @@
                     </div>
                 </div>
 
-                <!-- 슬라이드 인디케이터 -->
-                <div class="flex justify-center gap-2 mt-8">
-                    <button onclick="goToSlide('eyebrow', 0)" class="eyebrow-indicator w-3 h-3 rounded-full bg-fresh-yellow transition-all"></button>
-                    <button onclick="goToSlide('eyebrow', 1)" class="eyebrow-indicator w-3 h-3 rounded-full bg-gray-300 transition-all"></button>
-                    <button onclick="goToSlide('eyebrow', 2)" class="eyebrow-indicator w-3 h-3 rounded-full bg-gray-300 transition-all"></button>
-                    <button onclick="goToSlide('eyebrow', 3)" class="eyebrow-indicator w-3 h-3 rounded-full bg-gray-300 transition-all"></button>
-                    <button onclick="goToSlide('eyebrow', 4)" class="eyebrow-indicator w-3 h-3 rounded-full bg-gray-300 transition-all"></button>
-                    <button onclick="goToSlide('eyebrow', 5)" class="eyebrow-indicator w-3 h-3 rounded-full bg-gray-300 transition-all"></button>
+                    <!-- 슬라이드 인디케이터 -->
+                    <div class="flex justify-center gap-2 mt-8">
+                        <button onclick="goToSlide('eyebrow', 0)" class="eyebrow-indicator w-3 h-3 rounded-full bg-fresh-yellow transition-all"></button>
+                        <button onclick="goToSlide('eyebrow', 1)" class="eyebrow-indicator w-3 h-3 rounded-full bg-gray-300 transition-all"></button>
+                        <button onclick="goToSlide('eyebrow', 2)" class="eyebrow-indicator w-3 h-3 rounded-full bg-gray-300 transition-all"></button>
+                        <button onclick="goToSlide('eyebrow', 3)" class="eyebrow-indicator w-3 h-3 rounded-full bg-gray-300 transition-all"></button>
+                        <button onclick="goToSlide('eyebrow', 4)" class="eyebrow-indicator w-3 h-3 rounded-full bg-gray-300 transition-all"></button>
+                        <button onclick="goToSlide('eyebrow', 5)" class="eyebrow-indicator w-3 h-3 rounded-full bg-gray-300 transition-all"></button>
+                    </div>
                 </div>
             </div>
 
@@ -607,14 +646,14 @@
                                 </p>
                                 <p class="text-baegot font-black text-lg mb-4">
                                     <i class="fas fa-store mr-2"></i>
-                                    아브뉴프랑 5층 '맨즈핸드' 샵인샵 753스튜디오입니다
+                                    아브뉴프랑 5층 '맨즈핸즈' 샵인샵 753스튜디오입니다
                                 </p>
                                 <div class="flex flex-col sm:flex-row gap-3">
                                     <p class="text-sm text-baegot bg-soft-yellow px-4 py-2 rounded-lg font-black inline-block border-2 border-fresh-yellow">
                                         <i class="fas fa-parking mr-2"></i>지하주차장 무료 이용
                                     </p>
                                     <p class="text-sm text-baegot bg-soft-yellow px-4 py-2 rounded-lg font-black inline-block border-2 border-fresh-yellow">
-                                        <i class="fas fa-map-signs mr-2"></i>5층 맨즈핸드 내부
+                                        <i class="fas fa-map-signs mr-2"></i>5층 맨즈핸즈 내부
                                     </p>
                                 </div>
                             </div>
@@ -673,7 +712,7 @@
                 <div class="space-y-3 leading-relaxed">
                     <p class="text-lg text-white/60 mb-4">대표자: 서아름 | 상호: 753스튜디오</p>
                     <p>연락처: 010-8494-8563 | 카카오톡: 753스튜디오</p>
-                    <p>주소: 경기 시흥시 서울대학로 264번길 35, 아브뉴프프랑 그린동 5층 맨즈핸드 내</p>
+                    <p>주소: 경기 시흥시 서울대학로 264번길 35, 아브뉴프프랑 그린동 5층 맨즈핸즈 내</p>
                 </div>
                 <div class="md:text-right flex flex-col justify-end space-y-4">
                     <div class="text-fresh-yellow font-black text-2xl italic tracking-tighter">Professional Brow Artistry</div>
@@ -799,6 +838,26 @@
             isSmpOpen = !isSmpOpen;
 
             if (isSmpOpen) {
+                container.classList.remove('hidden');
+                btnText.textContent = '사진 닫기';
+                chevron.classList.add('rotate-180');
+            } else {
+                container.classList.add('hidden');
+                btnText.textContent = '사진 더보기';
+                chevron.classList.remove('rotate-180');
+            }
+        }
+
+        // Eyebrow Slider Toggle
+        let isEyebrowOpen = false;
+        function toggleEyebrowSlider() {
+            const container = document.getElementById('eyebrow-slider-container');
+            const btnText = document.getElementById('eyebrow-btn-text');
+            const chevron = document.getElementById('eyebrow-chevron');
+
+            isEyebrowOpen = !isEyebrowOpen;
+
+            if (isEyebrowOpen) {
                 container.classList.remove('hidden');
                 btnText.textContent = '사진 닫기';
                 chevron.classList.add('rotate-180');
